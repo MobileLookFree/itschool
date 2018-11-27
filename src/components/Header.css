@@ -1,7 +1,67 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); 
+
+@media screen and (min-width: 857px) {
+    a.header-menu-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header-menu-bar{
+       width: 600px;
+       min-width: 300px; 
+       margin: 10px;
+    }
+
+    .header-menu {
+      display: none;
+    }
+
+    a.header-menu-button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 5px 0px 5px;
+    }
+}
+
+@media screen and (max-width: 856px) {
+    .header-menu-bar{
+       width: 800px;
+       min-width: 300px; 
+       margin: 10px;
+    }
+
+    .header-menu {
+      display: none;
+    }
+
+    a.header-menu-button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 5px 0px 5px;
+    }
+}
+
+.header-menu-bar a{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    height: 44px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-menu-bar a:hover {
+    color: #2669f0; 
+}
 
 .header-back {
     width: 100%;
-    background: linear-gradient(135deg, #32cbfa 0%,#2669f0 100%);;
+    background: linear-gradient(135deg, #32cbfa 0%,#2669f0 100%);
     height: 196px;
     margin: 0;
     overflow: auto
@@ -16,7 +76,6 @@
     height: 64px;
     margin: 65px auto 65px;
     border-radius: 36px;
-    min-width: 768px;
 }
 
 .home-button {
@@ -41,7 +100,7 @@
     cursor: pointer;
 }
 
-.material-icons {
+.authorization .material-icons {
     color: white;
     display: inline-block;
     font-size: 30px;
@@ -60,8 +119,8 @@
 
 .header-menu {
     height: 64px;
-    min-width: 640px;
-    width: 700px;
+    min-width: 472px;
+    width: 640px;
 }
 
 ul{
@@ -87,7 +146,7 @@ ul{
     height: 44px;
     cursor: pointer;
     text-decoration: none;
-    padding: 20px 10px 0px 10px;
+    padding: 20px 5px 0px 5px;
     transition: 0.5s;
 }
 

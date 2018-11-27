@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +9,7 @@ class Header extends Component {
     }
 
     componentDidMount() {
-        this.setState({ chatVisible: false }); //флаг видимости чата в зависимости от авторизации
+        this.setState({ chatVisible: true }); //флаг видимости чата в зависимости от авторизации
     }
 
     render() {
@@ -16,6 +17,7 @@ class Header extends Component {
             <div className="header-back">
                 <div className="header-menu-bar">
                     <div className="home-button"><a href="http://localhost:3000"></a></div>
+                    <a href="" className="header-menu-button">Меню</a>
                     <div className="header-menu">
                         <ul >
                             <li><a href="">Новости</a></li>
