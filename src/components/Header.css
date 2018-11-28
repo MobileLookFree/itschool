@@ -105,7 +105,7 @@ nav a:hover {
     color: #2669f0; 
 }
   
-.home-button {
+.home-button{
     float: left;
     min-width: 32px;
     height: 32px;
@@ -114,6 +114,13 @@ nav a:hover {
     margin: 16px;
     transition: 0.5s ease;
     cursor: pointer;
+}
+
+.home-button .material-icons {
+    color: white;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px;
 }
 
 .authorization {
@@ -130,8 +137,8 @@ nav a:hover {
 .authorization .material-icons {
     color: white;
     display: inline-block;
-    font-size: 30px;
-    margin: 1px;
+    font-size: 28px;
+    margin: 2px;
 }
 
 .home-button:hover {

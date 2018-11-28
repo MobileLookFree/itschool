@@ -33,8 +33,8 @@ class Header extends Component {
             <div className="header-back">
                 <div className="container">
                     <nav>
-                        <div className="home-button"><a href="http://localhost:3000"></a></div>
-                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton" >Меню</a>
+                        <div className="home-button" title="На Главную"><a href=""><i className="material-icons">brightness_1</i></a></div>
+                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton">Меню</a>
                         <div className="header-menu">
                             <a href="">Новости</a>
                             <a href="">Курсы</a>
@@ -43,7 +43,7 @@ class Header extends Component {
                             {this.state.chatVisible && <a href="">Чат</a>}
                             <a href="">Контакты</a>
                         </div>
-                        <div className="authorization"><a href=""><i className="material-icons">person</i></a></div>
+                        <div className="authorization" title="Войти"><a href=""><i className="material-icons">person</i></a></div>
                         <div className="dropdown-menu" id="mobile">
                             <a href="">Новости</a>
                             <a href="">Курсы</a>
