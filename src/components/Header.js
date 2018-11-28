@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import './Header.css';
 
-function openMobileHeader() {
+window.onload = function () {
     var nav = document.getElementById("mobile");
-    if (nav.className === "dropdown-menu") {
-        nav.className += " mobile";
-    } else {
-        nav.className = "dropdown-menu";
-    }
-}
+    var openButton = document.getElementById("openNavButton");
 
-// function closeMibileHeader() {
-//     window.addEventListener('mouseup', function(event) {
-//         nav.className = "dropdown-menu";
-//     });
-// }
+    window.addEventListener('click', function (event) {
+        if (event.target == openButton && nav.className == "dropdown-menu") {
+            nav.className += " mobile";
+        }
+        else {
+            nav.className = "dropdown-menu";
+        }
+        if (event.target != openButton && nav.className == "dropdown-menu mobile") {
+            nav.className = "dropdown-menu";
+        }
+    })
+}
 
 class Header extends Component {
     constructor(props) {
@@ -32,7 +34,7 @@ class Header extends Component {
                 <div className="container">
                     <nav>
                         <div className="home-button"><a href="http://localhost:3000"></a></div>
-                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton" onClick={openMobileHeader}>Меню</a>
+                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton" >Меню</a>
                         <div className="header-menu">
                             <a href="">Новости</a>
                             <a href="">Курсы</a>
