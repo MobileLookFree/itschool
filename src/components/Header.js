@@ -8,13 +8,13 @@ function openMobileHeader() {
     } else {
         nav.className = "dropdown-menu";
     }
-
-    window.addEventListener('mouseup', function (event) {
-        if (event.target != nav && event.target.parentNode != nav) {
-            nav.className = "dropdown-menu";
-        }
-    });
 }
+
+// function closeMibileHeader() {
+//     window.addEventListener('mouseup', function(event) {
+//         nav.className = "dropdown-menu";
+//     });
+// }
 
 class Header extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class Header extends Component {
                 <div className="container">
                     <nav>
                         <div className="home-button"><a href="http://localhost:3000"></a></div>
-                        <a href="javascript:void(0);" className="header-menu-button" onClick={openMobileHeader}>Меню</a>
+                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton" onClick={openMobileHeader}>Меню</a>
                         <div className="header-menu">
                             <a href="">Новости</a>
                             <a href="">Курсы</a>
