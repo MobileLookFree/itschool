@@ -4,17 +4,24 @@
     a.header-menu-button {
         display: none;
     }
+
+    div.dropdown-menu {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 640px) {
-    .header-menu-bar{
+    div.header-menu-bar{
        width: 600px;
-       min-width: 300px; 
        margin: 10px;
     }
 
-    .header-menu {
+    div.header-menu {
       display: none;
+    }
+
+    div.dropdown-menu {
+        display: none;
     }
 
     a.header-menu-button {
@@ -22,17 +29,30 @@
         margin: 0 auto;
         padding: 20px 5px 0px 5px;
     }
+
+    div.dropdown-menu.mobile {
+        display: block;
+    }
+
+    div.dropdown-menu.mobile a {
+        display: block;
+        padding: 0px;
+    }
+
 }
 
 @media screen and (max-width: 856px) {
-    .header-menu-bar{
+    div.header-menu-bar{
        width: 800px;
-       min-width: 300px; 
        margin: 10px;
     }
 
-    .header-menu {
+    div.header-menu {
       display: none;
+    }
+
+    div.dropdown-menu {
+        display: none;
     }
 
     a.header-menu-button {
@@ -42,7 +62,33 @@
     }
 }
 
-.header-menu-bar a{
+.header-back {
+    width: 100%;
+    background: linear-gradient(135deg, #32cbfa 0%,#2669f0 100%);
+    min-height: 131px;
+    margin: 0;
+    padding-top: 65px;
+    overflow: visible;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    min-width: 300px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    height: 64px;
+    border-radius: 36px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
     color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -55,29 +101,10 @@
     transition: 0.5s;
 }
 
-.header-menu-bar a:hover {
+nav a:hover {
     color: #2669f0; 
 }
-
-.header-back {
-    width: 100%;
-    background: linear-gradient(135deg, #32cbfa 0%,#2669f0 100%);
-    height: 196px;
-    margin: 0;
-    overflow: auto
-}
-
-.header-menu-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: white;
-    width: 70%;
-    height: 64px;
-    margin: 65px auto 65px;
-    border-radius: 36px;
-}
-
+  
 .home-button {
     float: left;
     min-width: 32px;
@@ -121,18 +148,11 @@
     height: 64px;
     min-width: 472px;
     width: 640px;
-}
-
-ul{
-    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-}
-
-.header-menu li {
-    float: center;
 }
 
 .header-menu a {
@@ -142,7 +162,7 @@ ul{
     font-weight: 600;
     font-size: 20px;
     color: black;
-    display: inline-block;
+    display: block;
     height: 44px;
     cursor: pointer;
     text-decoration: none;
@@ -153,3 +173,34 @@ ul{
 .header-menu a:hover {
     color: #2669f0; 
 }
+
+.dropdown-menu.mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: white;
+    width: 100%;
+    border-radius: 32px;
+    margin: 72px auto;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    animation: fade-bottom ease 0.3s;
+}
+
+.dropdown-menu.mobile a {
+    text-align: center;
+    padding: 0 16px;
+    margin-top: 20px;
+}
+
+@keyframes fade-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

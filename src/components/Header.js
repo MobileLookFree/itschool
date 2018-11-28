@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import './Header.css';
 
+function openMobileHeader() {
+    var nav = document.getElementById("mobile");
+    if (nav.className === "dropdown-menu") {
+        nav.className += " mobile";
+    } else {
+        nav.className = "dropdown-menu";
+    }
+
+    window.addEventListener('mouseup', function (event) {
+        if (event.target != nav && event.target.parentNode != nav) {
+            nav.className = "dropdown-menu";
+        }
+    });
+}
 
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = { chatVisible: false, techBack: false};
+        this.state = { chatVisible: false, techBack: false };
     }
 
     componentDidMount() {
@@ -15,20 +29,29 @@ class Header extends Component {
     render() {
         return (
             <div className="header-back">
-                <div className="header-menu-bar">
-                    <div className="home-button"><a href="http://localhost:3000"></a></div>
-                    <a href="" className="header-menu-button">Меню</a>
-                    <div className="header-menu">
-                        <ul >
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Курсы</a></li>
-                            <li><a href="">Школы</a></li>
-                            <li><a href="">Ресурсы</a></li>
-                            {this.state.chatVisible && <li><a href="">Чат</a></li>}
-                            <li><a href="">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div className="authorization"><a href=""><i className="material-icons">person</i></a></div>
+                <div className="container">
+                    <nav>
+                        <div className="home-button"><a href="http://localhost:3000"></a></div>
+                        <a href="javascript:void(0);" className="header-menu-button" onClick={openMobileHeader}>Меню</a>
+                        <div className="header-menu">
+                            <a href="">Новости</a>
+                            <a href="">Курсы</a>
+                            <a href="">Школы</a>
+                            <a href="">Ресурсы</a>
+                            {this.state.chatVisible && <a href="">Чат</a>}
+                            <a href="">Контакты</a>
+                        </div>
+                        <div className="authorization"><a href=""><i className="material-icons">person</i></a></div>
+                        <div className="dropdown-menu" id="mobile">
+                            <a href="">Новости</a>
+                            <a href="">Курсы</a>
+                            <a href="">Школы</a>
+                            <a href="">Ресурсы</a>
+                            {this.state.chatVisible && <a href="">Чат</a>}
+                            <a href="">Контакты</a>
+                        </div>
+                    </nav>
+
                 </div>
             </div>
         );
