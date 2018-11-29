@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SmallScreen.css';
+import './css/SmallScreen.css';
 
 class SmallScreen extends Component {
     render() {

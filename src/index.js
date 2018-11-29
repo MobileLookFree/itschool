@@ -15,7 +15,6 @@ if (window.innerWidth < "310") {
     window.addEventListener('orientationchange', function (){
         ReactDOM.render(
             <div>
-                <Header />
                 <App />
             </div>, document.getElementById('root')
         );
@@ -25,7 +24,6 @@ if (window.innerWidth < "310") {
 else {
     ReactDOM.render(
         <div>
-            <Header />
             <App />
         </div>, document.getElementById('root')
     );
