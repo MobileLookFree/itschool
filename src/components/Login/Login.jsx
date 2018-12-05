@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './css/Login.css';
+import './Login.css';
 
 class Login extends Component {
 
     render() {
         return (
             <div className="login-card">
-                <h1>Войдите</h1>
-                <div class="user-avatar"></div>
+                <h1 className="login">Войдите</h1>
+                <div className="user-avatar"></div>
                 <input type="text" placeholder="Электронная почта"/>
                 <input type="password" placeholder="Пароль"/>
                 <button className="enter-login">Войти</button>
