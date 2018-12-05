@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BlogTitle from "../OnPageParts/BlogTitle";
+import BlogTitle from "../SiteParts/BlogTitle";
 
 class NewsBlog extends Component {
 

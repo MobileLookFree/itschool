@@ -4,7 +4,7 @@ import BlogTitle from '../SiteParts/BlogTitle';
 function MainPage (props) {
     return (
         <div>
-            <BlogTitle title="Что-то"/>
+            <BlogTitle title="Текст на главной"/>
         </div>
     );
 }
