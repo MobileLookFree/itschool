@@ -15,12 +15,12 @@ class HeaderMobile extends Component {
     render() {
         return (
             <div className="dropdown-menu" id="mobile">
-                <Link to="${process.env.PUBLIC_URL}/news">Новости</Link>
-                <Link to="${process.env.PUBLIC_URL}/courses">Курсы</Link>
-                <Link to="${process.env.PUBLIC_URL}/schools">Школы</Link>
-                <Link to="${process.env.PUBLIC_URL}/resources">Ресурсы</Link>
-                {this.state.chatVisible && <Link to="${process.env.PUBLIC_URL}/chat">Чат</Link>}
-                <Link to="${process.env.PUBLIC_URL}/about">О нас</Link>
+                <Link to="/news">Новости</Link>
+                <Link to="/courses">Курсы</Link>
+                <Link to="/schools">Школы</Link>
+                <Link to="/resources">Ресурсы</Link>
+                {this.state.chatVisible && <Link to="/chat">Чат</Link>}
+                <Link to="/about">О нас</Link>
             </div>
         );
     }
