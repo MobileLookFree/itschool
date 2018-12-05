@@ -11,13 +11,13 @@ class App extends Component {
 
     render() {
         return (
-            <Router history={history} basename={process.env.PUBLIC_URL}>
+            <Router basename={process.env.PUBLIC_URL} history={history} >
                 <div>
                     <Switch>
-                        <Route exact path="/" component={MainPage} />
-                        <Route exact path="/news" component={NewsBlog} />
-                        <Route exact path="/login" component={Login} />
-                        <Route exact path="*" component={Page404} />
+                        <Route exact path="${process.env.PUBLIC_URL}/" component={MainPage} />
+                        <Route exact path="${process.env.PUBLIC_URL}/news" component={NewsBlog} />
+                        <Route exact path="${process.env.PUBLIC_URL}/login" component={Login} />
+                        <Route exact path="${process.env.PUBLIC_URL}*" component={Page404} />
                     </Switch>
                 </div>
             </Router>
