@@ -39,17 +39,17 @@ class Header extends Component {
             <HeaderBack>
                 <Page>
                     <nav>
-                        <div className="home-button" title="На Главную"><Link to="/"><i className="material-icons">brightness_1</i></Link></div>
+                        <div className="home-button" title="На Главную"><Link to="${process.env.PUBLIC_URL}/"><i className="material-icons">brightness_1</i></Link></div>
                         <a href="javascript:void(0);" className="header-menu-button" id="openNavButton">Меню</a>
                         <div className="header-menu">
-                            <Link to="/news">Новости</Link>
-                            <Link to="/courses">Курсы</Link>
-                            <Link to="/schools">Школы</Link>
-                            <Link to="/resources">Ресурсы</Link>
-                            {this.state.chatVisible && <Link to="/chat">Чат</Link>}
-                            <Link to="/about">О нас</Link>
+                            <Link to="${process.env.PUBLIC_URL}/news">Новости</Link>
+                            <Link to="${process.env.PUBLIC_URL}/courses">Курсы</Link>
+                            <Link to="${process.env.PUBLIC_URL}/schools">Школы</Link>
+                            <Link to="${process.env.PUBLIC_URL}/resources">Ресурсы</Link>
+                            {this.state.chatVisible && <Link to="${process.env.PUBLIC_URL}/chat">Чат</Link>}
+                            <Link to="${process.env.PUBLIC_URL}/about">О нас</Link>
                         </div>
-                        <div className="authorization" title="Войти"><Link to="/login"><i className="material-icons">person</i></Link></div>
+                        <div className="authorization" title="Войти"><Link to="${process.env.PUBLIC_URL}/login"><i className="material-icons">person</i></Link></div>
                         <HeaderMobile />
                     </nav>
                 </Page>
