@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import BlogTitle from "../SiteParts/BlogTitle";
+import Header from '../Header/Header';
+import Page from '../Page/Page';
 
-class NewsBlog extends Component {
-
-    render() {
-        return (
-            <div>
-                <BlogTitle title="Новости школы" subtitle="За неделю"/>
-            </div>
-        );
-    }
+function NewsBlog() {
+    return (
+        <div>
+            <Header />
+            <Page>
+                <BlogTitle title="Новости школы" subtitle="За неделю" />
+            </Page>
+        </div>
+    );
 }
 
 export default NewsBlog;

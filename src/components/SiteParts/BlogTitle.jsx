@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./BlogTitle.css"
 
-function BlogTitle(props) {
+const BlogTitle = (props) => {
     return (
         <div>
         <h1>{props.title}</h1>

@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import BlogTitle from '../SiteParts/BlogTitle';
 
-function MainPage (props) {
+import BlogTitle from '../SiteParts/BlogTitle';
+import Header from '../Header/Header';
+import Page from '../Page/Page';
+import FooterBack from '../Footer/FooterBack/FooterBack';
+
+const MainPage = (props) => {
     return (
         <div>
-            <BlogTitle title="Текст на главной"/>
+            <Header />
+            <Page>
+                <BlogTitle title="Текст на главной" />
+            </Page>
+            <FooterBack />
         </div>
     );
 }
