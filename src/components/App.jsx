@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import history from './history';
 
 import MainPage from './MainPage/MainPage';
@@ -13,16 +13,16 @@ class App extends Component {
     console.log("URL: ", process.env.PUBLIC_URL);
 
         return (
-            <Router basename={process.env.PUBLIC_URL} history={history} >
+            <HashRouter basename={process.env.PUBLIC_URL} history={history} >
                 <div>
                     <Switch>
                         <Route exact path="/" component={MainPage} />
-                        <Route exact path="/news" component={NewsBlog} />
-                        <Route exact path="/login" component={Login} />
-                        <Route exact path="*" component={Page404} />
+                        <Route path="/news" component={NewsBlog} />
+                        <Route path="/login" component={Login} />
+                        <Route path="*" component={Page404} />
                     </Switch>
                 </div>
-            </Router>
+            </HashRouter>
         );
     }
 }
