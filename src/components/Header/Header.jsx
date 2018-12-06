@@ -5,24 +5,30 @@ import './Header.css';
 import HeaderBack from './HeaderBack/HeaderBack';
 import Page from '../Page/Page';
 import HeaderMobile from './HeaderMobile/HeaderMobile';
+import HomeButtom from './HomeButton';
 
-window.onload = function () {
+function openMenu (event) {
     var nav = document.getElementById("mobile");
     var openButton = document.getElementById("openNavButton");
 
-    window.addEventListener('click', function (event) {
-        if (event.target == openButton && nav.className == "dropdown-menu") {
-            nav.className += " mobile";
-            this.console.log("click");
-        }
-        else {
-            nav.className = "dropdown-menu";
-        }
-        if (event.target != openButton && nav.className == "dropdown-menu mobile") {
-            nav.className = "dropdown-menu";
-        }
-    })
-}
+    if (event.target == openButton && nav.className == "dropdown-menu") {
+        nav.className += " mobile";
+    }
+    else {
+        nav.className = "dropdown-menu";
+    }
+ }
+
+//  window.onload= function () {
+//     var nav = document.getElementById("mobile");
+//     var openButton = document.getElementById("openNavButton");
+
+//     window.addEventListener('click', function (event) {
+//         if (event.target != openButton && nav.className == "dropdown-menu mobile") {
+//             nav.className = "dropdown-menu";
+//         }
+//     })
+//  }
 
 class Header extends Component {
     constructor(props) {
@@ -39,8 +45,8 @@ class Header extends Component {
             <HeaderBack>
                 <Page>
                     <nav>
-                        <div className="home-button" title="На Главную"><Link to="/"><i className="material-icons">brightness_1</i></Link></div>
-                        <a href="javascript:void(0);" className="header-menu-button" id="openNavButton">Меню</a>
+                        <HomeButtom />
+                        <a onClick={openMenu} className="header-menu-button" id="openNavButton">Меню</a>
                         <div className="header-menu">
                             <Link to="/news">Новости</Link>
                             <Link to="/courses">Курсы</Link>
