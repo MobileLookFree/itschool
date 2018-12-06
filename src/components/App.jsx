@@ -13,7 +13,8 @@ class App extends Component {
     console.log("URL: ", process.env.PUBLIC_URL);
 
         return (
-            <HashRouter basename={process.env.PUBLIC_URL} history={history} >
+            // basename={process.env.PUBLIC_URL}
+            <HashRouter history={history} >
                 <div>
                     <Switch>
                         <Route exact path="/" component={MainPage} />
