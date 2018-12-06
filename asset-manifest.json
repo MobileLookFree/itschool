@@ -1,13 +1,13 @@
 {
   "main.css": "/itschool/static/css/main.a41f3b21.chunk.css",
-  "main.js": "/itschool/static/js/main.c88b07ab.chunk.js",
-  "main.js.map": "/itschool/static/js/main.c88b07ab.chunk.js.map",
+  "main.js": "/itschool/static/js/main.b7dece8a.chunk.js",
+  "main.js.map": "/itschool/static/js/main.b7dece8a.chunk.js.map",
   "static/js/1.30b6c245.chunk.js": "/itschool/static/js/1.30b6c245.chunk.js",
   "static/js/1.30b6c245.chunk.js.map": "/itschool/static/js/1.30b6c245.chunk.js.map",
   "runtime~main.js": "/itschool/static/js/runtime~main.13dd4594.js",
   "runtime~main.js.map": "/itschool/static/js/runtime~main.13dd4594.js.map",
   "static/css/main.a41f3b21.chunk.css.map": "/itschool/static/css/main.a41f3b21.chunk.css.map",
   "index.html": "/itschool/index.html",
-  "precache-manifest.45d74ad5ca0c20b3da83e75fbc17944c.js": "/itschool/precache-manifest.45d74ad5ca0c20b3da83e75fbc17944c.js",
+  "precache-manifest.9b33b9814781b428fa8db575aa92dcc7.js": "/itschool/precache-manifest.9b33b9814781b428fa8db575aa92dcc7.js",
   "service-worker.js": "/itschool/service-worker.js"
 }
