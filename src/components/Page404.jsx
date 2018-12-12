@@ -3,9 +3,8 @@ import './Page404.css';
 
 import Page from './Page/Page';
 import HeaderFullScreenPage from './Header/HeaderFullScreenPage/HeaderFullScreenPage';
-import BlogTitle from './SiteParts/BlogTitle';
 
-function Page404(props) {
+function Page404() {
     return (
         <div>
             <HeaderFullScreenPage />

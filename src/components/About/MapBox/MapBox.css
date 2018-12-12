@@ -1,0 +1,22 @@
+@media screen and (max-width: 640px) {
+    div.map {
+        max-height: 320px;
+        min-width: 320px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1274px) {
+    div.map {
+        min-width: 100%;
+        padding-right: 0px;
+    }
+}
+
+.map {
+    height: 480px;
+    width: 550px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+

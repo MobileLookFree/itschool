@@ -7,6 +7,7 @@ import NewsBlog from './NewsBlog/NewsBlog';
 import Login from './Login/Login';
 import Page404 from './Page404';
 import CoursePage from './Courses/CoursePage';
+import AboutPage from './About/AboutPage';
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                         <Route exact path="/" component={MainPage} />
                         <Route path="/news" component={NewsBlog} />
                         <Route path="/courses" component={CoursePage} />
+                        <Route path="/about" component={AboutPage} />
                         <Route path="/login" component={Login} />
                         <Route path="*" component={Page404} />
                     </Switch>
